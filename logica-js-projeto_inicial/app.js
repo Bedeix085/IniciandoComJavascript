@@ -4,8 +4,9 @@ var numeroSecreto = 5;
 
 var chute = prompt("Escolha um número entre 1 e 10!");
 
+//Se o chute for igual ao numero secreto
 if (numeroSecreto == chute){
-    console.log("Você ganhou o jogo!")
+    alert("Você ganhou o jogo!")
 } else {
-    console.log("Número errado")
+    alert("Número errado")
 }
