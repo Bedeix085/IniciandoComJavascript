@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+
+<body>
+    <script>
+        var numeroSecreto = 5;
+        var chute;
+        var numeroDeTentativas = 0;
+
+        // Enquanto chute não for igual ao n.s
+        while (numeroSecreto != chute) {
+            chute = prompt("Escolha um número de 1 a 10!");
+
+            if (chute == numeroSecreto) {
+                numeroDeTentativas++;
+                alert("Parabéns! Você acertou em " + numeroDeTentativas + " tentativas.");
+                break;
+            }
+
+            if (chute > numeroSecreto) {
+                alert("O numero secreto é menor que " + chute);
+                numeroDeTentativas++;
+            } else {
+                alert("O numero secreto é maior que " + chute);
+                numeroDeTentativas++;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
