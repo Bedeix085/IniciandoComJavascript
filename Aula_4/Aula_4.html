@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+
+<body>
+    <script>
+        var numeroSecreto = parseInt(Math.random() * 100 + 1);
+        var chute;
+        var numeroDeTentativas = 0;
+
+        // Enquanto chute não for igual ao n.s
+        while (numeroSecreto != chute) {
+            chute = prompt("Escolha um número de 1 a 100!");
+
+            if (chute == numeroSecreto) {
+                numeroDeTentativas++;
+                break;
+            }
+
+            if (chute > numeroSecreto) {
+                alert("O numero secreto é menor que " + chute);
+                numeroDeTentativas++;
+            } else {
+                alert("O numero secreto é maior que " + chute);
+                numeroDeTentativas++;
+            }
+        }
+
+        var palavraTentativa = numeroDeTentativas > 1 ? ' Tentativas' : ' Tentativa';
+
+        alert("Parabéns! Você acertou em " + numeroDeTentativas +  palavraTentativa);
+        
+
+    </script>
+</body>
+
+</html>
